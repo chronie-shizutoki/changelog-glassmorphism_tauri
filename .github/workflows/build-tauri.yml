@@ -74,9 +74,11 @@ jobs:
 
       # 上传构建产物
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.platform }}-artifacts
           path: |
             src-tauri/target/release/bundle/**
             !src-tauri/target/release/bundle/**/target/**
+          # v4 requires explicit compression level
+          compression-level: 6
