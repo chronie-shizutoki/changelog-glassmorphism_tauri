@@ -10,9 +10,15 @@ runs:
       run: |
         choco install --no-progress windows-sdk-10.0
         # 确保 WebView2 Runtime 已安装（使用不同的安装源）
-        choco install --no-progress microsoft-edge-webview2-runtime --source windowsfeatures || \
-        choco install --no-progress microsoft-edge-webview2-runtime --pre || \
-        echo "WebView2 Runtime installation failed, continuing anyway"
+        try {
+          choco install --no-progress microsoft-edge-webview2-runtime --source windowsfeatures
+        } catch {
+          try {
+            choco install --no-progress microsoft-edge-webview2-runtime --pre
+          } catch {
+            Write-Host "WebView2 Runtime installation failed, continuing anyway"
+          }
+        }
 
     # 安装 macOS 特定依赖
     - name: Install macOS dependencies
@@ -28,8 +34,8 @@ runs:
       shell: bash
       run: |
         sudo apt-get update
-        # 尝试安装 libwebkit2gtk-4.1-dev（Ubuntu 24.04 上的新版本），如果失败则尝试旧版本
-        sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf libssl-dev libayatana-appindicator3-dev || \
-        sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf libssl-dev libayatana-appindicator3-dev
+        # 仅安装 libayatana-appindicator3-dev（与 libappindicator3-dev 冲突）
+        # 在 Ubuntu 24.04 上使用 libwebkit2gtk-4.1-dev
+        sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.1-dev librsvg2-dev patchelf libssl-dev libayatana-appindicator3-dev
         # 安装其他可能需要的依赖
         sudo apt-get install -y build-essential pkg-config libx11-dev libasound2-dev libudev-dev

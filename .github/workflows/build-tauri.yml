@@ -59,7 +59,8 @@ jobs:
         if: matrix.platform == 'ubuntu-latest'
         run: |
           sudo apt-get update
-          sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
+          # 使用正确的包名，避免冲突
+          sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.1-dev librsvg2-dev patchelf libayatana-appindicator3-dev
 
       # 构建 Tauri 应用
       - name: Build Tauri app
@@ -69,6 +70,8 @@ jobs:
         with:
           # 仅在标签推送时发布
           releaseId: ${{ github.event_name == 'push' && github.ref_type == 'tag' && github.ref_name || '' }}
+          # 指定正确的项目路径
+          projectPath: .
 
       # 上传构建产物
       - name: Upload artifacts
