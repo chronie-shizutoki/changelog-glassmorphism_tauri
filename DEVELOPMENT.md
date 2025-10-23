@@ -257,6 +257,81 @@ pnpm tauri:build
 - Vercel
 - 任何静态文件服务器
 
+## 跨平台构建工作流
+
+本项目使用 GitHub Actions 工作流来自动化构建跨平台应用包。工作流配置位于 `.github/workflows/build-tauri.yml`。
+
+### 工作流触发条件
+
+工作流在以下情况下触发：
+
+1. **标签推送**：当推送到带有 `*` 格式的标签时
+2. **Pull Request**：当有 PR 提交到 `main` 分支时
+3. **手动触发**：通过 GitHub 界面手动触发
+
+### 支持的平台
+
+工作流将为以下平台构建应用：
+
+- **Windows**：生成 `.msi` 和 `.exe`（NSIS）安装程序
+- **macOS**：生成 `.dmg` 安装程序
+- **Linux**：生成 `.deb` 包和 `.AppImage` 文件
+
+### 构建产物
+
+构建完成后，工作流将：
+
+1. 上传构建产物作为 GitHub Actions 工作流的产物（artifacts）
+2. 如果是标签推送，还会将构建产物作为 GitHub Release 的资产上传
+
+### 自定义依赖安装
+
+工作流使用自定义的依赖安装操作（`.github/actions/install-deps`）来确保在所有平台上都正确安装了必要的系统依赖。
+
+## 发布应用
+
+要发布新版本的应用：
+
+1. 更新 `package.json` 和 `src-tauri/tauri.conf.json` 中的版本号
+2. 创建一个新的标签并推送到 GitHub：
+
+```bash
+git tag vX.Y.Z
+git push origin vX.Y.Z
+```
+
+3. GitHub Actions 将自动构建应用并创建一个新的 Release
+4. 前往 GitHub 仓库的 Releases 页面，编辑发布说明并发布
+
+## 环境变量
+
+应用支持以下环境变量（可在 `.env` 文件中设置）：
+
+- `VITE_GITHUB_TOKEN`：GitHub API 令牌，用于提高 API 速率限制
+- `VITE_GITHUB_OWNER`：GitHub 仓库所有者
+- `VITE_GITHUB_REPO`：GitHub 仓库名称
+
+请参考 `.env.example` 文件了解如何设置这些变量。
+
+## 故障排除
+
+### 构建失败
+
+如果工作流构建失败，请检查以下几点：
+
+1. 确保所有依赖项都在 `package.json` 中正确列出
+2. 检查 `src-tauri/tauri.conf.json` 中的配置是否正确
+3. 查看 GitHub Actions 工作流日志以获取详细的错误信息
+
+### 权限问题
+
+确保工作流有足够的权限来创建发布和上传资产。工作流配置中已经包含了必要的权限设置：
+
+```yaml
+permissions:
+  contents: write
+```
+
 ## 调试
 
 ### 浏览器开发者工具
