@@ -1,0 +1,120 @@
+{
+  "changelog": [
+    {
+      "version": "2.1.0",
+      "date": "2024-10-09",
+      "type": "major",
+      "title": {
+        "en": "Major UI Overhaul & Performance Boost",
+        "zh-CN": "重大界面改版与性能提升",
+        "zh-TW": "重大介面改版與效能提升",
+        "ja": "メジャーUI刷新とパフォーマンス向上"
+      },
+      "description": {
+        "en": "Complete redesign of the user interface with improved performance and new features.",
+        "zh-CN": "完全重新设计用户界面，提升性能并新增功能。",
+        "zh-TW": "完全重新設計使用者介面，提升效能並新增功能。",
+        "ja": "ユーザーインターフェースの完全な再設計により、パフォーマンスが向上し、新機能が追加されました。"
+      },
+      "changes": [
+        {
+          "type": "feature",
+          "content": {
+            "en": "## New Dark Mode\n\nIntroduced a beautiful dark theme that automatically adapts to system preferences.\n\n- Smooth theme transitions\n- Reduced eye strain\n- Better battery life on OLED displays",
+            "zh-CN": "## 全新深色模式\n\n推出美观的深色主题，自动适应系统偏好设置。\n\n- 流畅的主题切换\n- 减少眼部疲劳\n- OLED显示器更省电",
+            "zh-TW": "## 全新深色模式\n\n推出美觀的深色主題，自動適應系統偏好設定。\n\n- 流暢的主題切換\n- 減少眼部疲勞\n- OLED顯示器更省電",
+            "ja": "## 新しいダークモード\n\nシステム設定に自動的に適応する美しいダークテーマを導入しました。\n\n- スムーズなテーマ切り替え\n- 目の疲労軽減\n- OLEDディスプレイでのバッテリー寿命向上"
+          }
+        },
+        {
+          "type": "improvement",
+          "content": {
+            "en": "## Performance Optimization\n\nSignificant improvements in loading speed and responsiveness:\n\n- **50% faster** initial load time\n- Optimized image loading\n- Reduced memory usage",
+            "zh-CN": "## 性能优化\n\n显著提升加载速度和响应性：\n\n- 初始加载时间**快50%**\n- 优化图片加载\n- 减少内存使用",
+            "zh-TW": "## 效能最佳化\n\n顯著提升載入速度和回應性：\n\n- 初始載入時間**快50%**\n- 最佳化圖片載入\n- 減少記憶體使用",
+            "ja": "## パフォーマンス最適化\n\n読み込み速度と応答性が大幅に改善されました：\n\n- 初期読み込み時間が**50%高速化**\n- 画像読み込みの最適化\n- メモリ使用量の削減"
+          }
+        },
+        {
+          "type": "fix",
+          "content": {
+            "en": "## Bug Fixes\n\n- Fixed navigation issues on mobile devices\n- Resolved memory leaks in background processes\n- Corrected timezone handling in date displays",
+            "zh-CN": "## 错误修复\n\n- 修复移动设备导航问题\n- 解决后台进程内存泄漏\n- 修正日期显示的时区处理",
+            "zh-TW": "## 錯誤修復\n\n- 修復行動裝置導覽問題\n- 解決背景程序記憶體洩漏\n- 修正日期顯示的時區處理",
+            "ja": "## バグ修正\n\n- モバイルデバイスでのナビゲーション問題を修正\n- バックグラウンドプロセスのメモリリークを解決\n- 日付表示のタイムゾーン処理を修正"
+          }
+        }
+      ]
+    },
+    {
+      "version": "2.0.5",
+      "date": "2024-09-28",
+      "type": "patch",
+      "title": {
+        "en": "Security Update & Minor Improvements",
+        "zh-CN": "安全更新与小幅改进",
+        "zh-TW": "安全更新與小幅改進",
+        "ja": "セキュリティアップデートと軽微な改善"
+      },
+      "description": {
+        "en": "Important security patches and quality of life improvements.",
+        "zh-CN": "重要安全补丁和用户体验改进。",
+        "zh-TW": "重要安全修補程式和使用者體驗改進。",
+        "ja": "重要なセキュリティパッチと利便性の向上。"
+      },
+      "changes": [
+        {
+          "type": "security",
+          "content": {
+            "en": "## Security Enhancements\n\n- Updated all dependencies to latest secure versions\n- Enhanced input validation\n- Improved authentication mechanisms",
+            "zh-CN": "## 安全增强\n\n- 更新所有依赖到最新安全版本\n- 增强输入验证\n- 改进身份验证机制",
+            "zh-TW": "## 安全增強\n\n- 更新所有相依性到最新安全版本\n- 增強輸入驗證\n- 改進身分驗證機制",
+            "ja": "## セキュリティ強化\n\n- すべての依存関係を最新の安全なバージョンに更新\n- 入力検証の強化\n- 認証メカニズムの改善"
+          }
+        },
+        {
+          "type": "improvement",
+          "content": {
+            "en": "## User Experience\n\n- Improved accessibility features\n- Better keyboard navigation\n- Enhanced screen reader support",
+            "zh-CN": "## 用户体验\n\n- 改进无障碍功能\n- 更好的键盘导航\n- 增强屏幕阅读器支持",
+            "zh-TW": "## 使用者體驗\n\n- 改進無障礙功能\n- 更好的鍵盤導覽\n- 增強螢幕閱讀器支援",
+            "ja": "## ユーザーエクスペリエンス\n\n- アクセシビリティ機能の改善\n- キーボードナビゲーションの向上\n- スクリーンリーダーサポートの強化"
+          }
+        }
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "date": "2024-09-15",
+      "type": "major",
+      "title": {
+        "en": "Complete Platform Rewrite",
+        "zh-CN": "平台完全重写",
+        "zh-TW": "平台完全重寫",
+        "ja": "プラットフォーム完全書き直し"
+      },
+      "description": {
+        "en": "Ground-up rewrite with modern technologies and improved architecture.",
+        "zh-CN": "采用现代技术和改进架构的全新重写。",
+        "zh-TW": "採用現代技術和改進架構的全新重寫。",
+        "ja": "最新技術と改善されたアーキテクチャによる完全な書き直し。"
+      },
+      "changes": [
+        {
+          "type": "feature",
+          "content": {
+            "en": "## New Architecture\n\nBuilt from scratch with modern web technologies:\n\n- **React 18** with concurrent features\n- **TypeScript** for better code quality\n- **Vite** for lightning-fast development\n- **Tailwind CSS** for consistent styling",
+            "zh-CN": "## 全新架构\n\n使用现代Web技术从零构建：\n\n- **React 18** 并发特性\n- **TypeScript** 提升代码质量\n- **Vite** 极速开发体验\n- **Tailwind CSS** 一致的样式系统",
+            "zh-TW": "## 全新架構\n\n使用現代Web技術從零建構：\n\n- **React 18** 並行特性\n- **TypeScript** 提升程式碼品質\n- **Vite** 極速開發體驗\n- **Tailwind CSS** 一致的樣式系統",
+            "ja": "## 新しいアーキテクチャ\n\n最新のWeb技術でゼロから構築：\n\n- **React 18** 並行機能付き\n- **TypeScript** コード品質向上\n- **Vite** 超高速開発\n- **Tailwind CSS** 一貫したスタイリング"
+          }
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "lastUpdated": "2024-10-09T10:30:00Z",
+    "version": "1.0.0",
+    "supportedLanguages": ["en", "zh-CN", "zh-TW", "ja"]
+  }
+}

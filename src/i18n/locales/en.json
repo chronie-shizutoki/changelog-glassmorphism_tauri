@@ -1,0 +1,55 @@
+{
+  "title": "Changelog",
+  "subtitle": "Stay updated with our latest features and improvements",
+  "language": "Language",
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "version": {
+    "released": "Released on {{date}}",
+    "total": "Versions",
+    "type": {
+      "major": "Major Release",
+      "minor": "Minor Release", 
+      "patch": "Patch Release"
+    }
+  },
+  "changeType": {
+    "feature": "New Feature",
+    "improvement": "Improvement",
+    "fix": "Bug Fix",
+    "security": "Security",
+    "breaking": "Breaking Change",
+    "deprecated": "Deprecated"
+  },
+  "loading": "Loading changelog...",
+  "error": "Failed to load changelog",
+  "empty": "No changelog entries found",
+  "languages": {
+    "en": "English",
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文",
+    "ja": "日本語"
+  },
+  "stats": {
+    "title": "Update Statistics"
+  },
+  "details": {
+    "expand": "View Details",
+    "collapse": "Hide Details"
+  },
+  "search": {
+    "placeholder": "Search changelog...",
+    "noResults": "No matching results found",
+    "adjustFilters": "Try adjusting your search terms or filters",
+    "resultsFound": "Found {{count}} matching results",
+    "totalVersions": "Total {{count}} version updates"
+  },
+  "filter": {
+    "allTypes": "All Types"
+  },
+  "retry": "Retry",
+  "backToTop": "Back to Top"
+}

@@ -1,0 +1,5 @@
+/dist
+/node_modules
+rustup-init.exe
+src-tauri/Cargo.lock
+src-tauri/Cargo.toml

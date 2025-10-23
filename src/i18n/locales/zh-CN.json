@@ -1,0 +1,55 @@
+{
+  "title": "更新日志",
+  "subtitle": "了解我们最新的功能和改进",
+  "language": "语言",
+  "theme": {
+    "toggle": "切换主题",
+    "light": "浅色",
+    "dark": "深色"
+  },
+  "version": {
+    "released": "发布于 {{date}}",
+    "total": "版本",
+    "type": {
+      "major": "重大版本",
+      "minor": "次要版本",
+      "patch": "补丁版本"
+    }
+  },
+  "changeType": {
+    "feature": "新功能",
+    "improvement": "改进",
+    "fix": "错误修复",
+    "security": "安全更新",
+    "breaking": "破坏性更改",
+    "deprecated": "已弃用"
+  },
+  "loading": "正在加载更新日志...",
+  "error": "加载更新日志失败",
+  "empty": "暂无更新日志",
+  "languages": {
+    "en": "English",
+    "zh-CN": "简体中文",
+    "zh-TW": "繁體中文",
+    "ja": "日本語"
+  },
+  "stats": {
+    "title": "更新统计"
+  },
+  "details": {
+    "expand": "查看详情",
+    "collapse": "收起详情"
+  },
+  "search": {
+    "placeholder": "搜索更新日志...",
+    "noResults": "未找到匹配的结果",
+    "adjustFilters": "尝试调整搜索条件或过滤器",
+    "resultsFound": "找到 {{count}} 个相关结果",
+    "totalVersions": "共 {{count}} 个版本更新"
+  },
+  "filter": {
+    "allTypes": "全部类型"
+  },
+  "retry": "重试",
+  "backToTop": "返回顶部"
+}
