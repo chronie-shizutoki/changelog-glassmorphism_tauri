@@ -45,11 +45,10 @@
       "timestampUrl": "http://timestamp.comodoca.com/authenticode"
     },
     "linux": {
-      "depends": ["gdk-3.0", "webkit2gtk-4.0"],
-      "icon": {
-        "scalable": [],
-        "stock": []
-      }
+      "deb": {
+        "depends": []
+      },
+      "appimage": {}
     }
   }
 }

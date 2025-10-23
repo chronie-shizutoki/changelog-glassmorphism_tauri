@@ -69,8 +69,6 @@ jobs:
         with:
           # 仅在标签推送时发布
           releaseId: ${{ github.event_name == 'push' && github.ref_type == 'tag' && github.ref_name || '' }}
-          # 启用调试日志
-          debug: true
 
       # 上传构建产物
       - name: Upload artifacts
